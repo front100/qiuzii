@@ -1,4 +1,4 @@
-import { Text, StyleSheet, Pressable, View } from 'react-native';
+import { Text, StyleSheet, Pressable } from 'react-native';
 import { COLORS, FONT, SIZES } from '../../constants';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CountdownCircleTimer } from 'react-native-countdown-circle-timer';
@@ -26,7 +26,6 @@ const ErrorView = ({ refetchData }: IErrorViewProps) => {
         isPlaying={true}
         duration={3}
         colors="#40A2E3"
-        // key={questionNumber}
         size={60}
         strokeWidth={6}
       >
@@ -58,7 +57,6 @@ const styles = StyleSheet.create({
     padding: SIZES.xMedium,
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: COLORS.lightWhite,
   },
   title: {
     fontFamily: FONT.bold,

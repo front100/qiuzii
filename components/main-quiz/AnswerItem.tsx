@@ -31,13 +31,11 @@ const AnswerItem = ({
   useEffect(() => {
     setIsTouched(false);
     setIsStart(true);
-    // setIsAnswerCorrect2(false);
   }, [questionNumber]);
 
   const handleAnswer = () => {
     onPress(answer);
     setIsTouched(true);
-    // setIsAnswerCorrect2(isAnswerCorrect);
 
     const userData: IAnsweredQuestion = {
       question: quizData[questionNumber].question,
@@ -56,17 +54,8 @@ const AnswerItem = ({
   else if (isTouched && isAnswered && !isAnswerCorrect) touchedStyle = styles.invalid;
   else if (!isTouched && isAnswered && isAnswerCorrect) touchedStyle = styles.valid;
   else touchedStyle = styles.start;
-  // console.log(isAnswered);
-
-  // console.log('answerItem');
 
   return (
-    // <Animatable.View
-    //   duration={1000}
-    //   // animation={(index + 1) % 2 ? 'slideInLeft' : 'slideInRight'}
-    //   animation={isStart ? 'slideInLeft' : ''}
-    //   // delay={index * 500}
-    // >
     <Pressable
       onPress={handleAnswer}
       style={[styles.answerBtn, touchedStyle]}
@@ -74,7 +63,6 @@ const AnswerItem = ({
     >
       <Text style={[styles.text]}>{answer}</Text>
     </Pressable>
-    // </Animatable.View>
   );
 };
 export default AnswerItem;

@@ -34,14 +34,8 @@ const styles = StyleSheet.create({
     // backgroundColor: COLORS.mainYellow,
     paddingHorizontal: SIZES.large,
     paddingTop: SIZES.small,
-    // marginBottom: 80,
   },
-  header: {
-    // paddingBottom: SIZES.extraLarge,
-    // flexDirection: 'row-reverse',
-    // justifyContent: 'space-between',
-    // alignItems: 'center',
-  },
+  header: {},
   bottom: {
     alignItems: 'center',
     paddingBottom: SIZES.extraLarge,

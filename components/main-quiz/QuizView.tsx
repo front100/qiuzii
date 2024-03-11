@@ -7,15 +7,11 @@ import type { TransformedData } from '../../interfaces/quizdata';
 
 import { COLORS, FONT, SIZES } from '../../constants';
 import AnswerItem from './AnswerItem';
-import { createAnswers, delay } from '../../helpers/helpFunctions';
+import { delay } from '../../helpers/helpFunctions';
 import { useContext, useState, useEffect } from 'react';
 import { QuizContext } from '../../context/quizContext';
 
 import StatusViewModern from './StatusViewModern';
-
-interface IQuizViewProps {
-  question: TransformedData;
-}
 
 const QuizView = () => {
   const router = useRouter();
@@ -31,7 +27,7 @@ const QuizView = () => {
     setIsStart(true);
   }, [questionNumber]);
 
-  const handleCorrectAnswer = async (answer: string) => {
+  const handleCorrectAnswer = async () => {
     setIsAnswered(true);
 
     await delay(1000);
@@ -77,18 +73,15 @@ export default QuizView;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: 'lime',
-    // padding: 15,
   },
   body: {
     flexBasis: '35%',
     paddingHorizontal: SIZES.large,
     paddingTop: SIZES.medium,
-    // backgroundColor: 'lime',
   },
   footer: {
     flexGrow: 1,
-    // paddingHorizontal: SIZES.medium,
+
     paddingTop: SIZES.xxxLarge,
     backgroundColor: COLORS.mainGrey,
   },
@@ -108,10 +101,5 @@ const styles = StyleSheet.create({
 
     textAlign: 'center',
   },
-  answersBlock: {
-    // paddingHorizontal: SIZES.medium,
-    // marginTop: 100,
-    // gap: 10,
-    // backgroundColor: 'lightblue',
-  },
+  answersBlock: {},
 });

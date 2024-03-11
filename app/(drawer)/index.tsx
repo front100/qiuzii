@@ -1,6 +1,6 @@
 import { Link } from 'expo-router';
 import { useContext, useEffect, useState } from 'react';
-import { Text, View, StyleSheet, Pressable, Button } from 'react-native';
+import { Text, View, StyleSheet, Pressable } from 'react-native';
 
 import { difficultyData, categoriesData } from '../../helpers/quizParameters';
 
