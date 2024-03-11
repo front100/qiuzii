@@ -1,7 +1,13 @@
 {
   "expo": {
-    "name": "quiz-expo-router",
-    "slug": "quiz-expo-router",
+    "androidStatusBar": {
+      "backgroundColor": "#40A2E3",
+      "translucent": false,
+      "barStyle": "light-content"
+    },
+    "name": "Quizii",
+    "slug": "quizii",
+    "scheme": "quiz-expo-scheme",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,11 +15,9 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#40A2E3"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -21,10 +25,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.notfromgames.quizii"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": ["expo-router"],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "69b7b85c-81b6-4cca-b245-836393d90213"
+      }
     }
   }
 }
