@@ -1,6 +1,7 @@
 {
   "cli": {
-    "version": ">= 7.1.2"
+    "version": ">= 7.1.2",
+    "appVersionSource": "local"
   },
   "build": {
     "development": {
@@ -14,7 +15,9 @@
     "preview": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+      "autoIncrement": true
+    }
   },
   "submit": {
     "production": {}
